@@ -25,7 +25,7 @@ unzip vscjava.vscode-java-test-0.35.0.vsix "extension/*" &&\
 mv extension /opt/code-oss/extensions/java-test
 
 RUN wget https://open-vsx.org/api/hashicorp/terraform/linux-x64/2.25.2/file/hashicorp.terraform-2.25.2@linux-x64.vsix && \
-unzip hashicorp.terraform-2.25.2@linux-x64.vsix "extensions/*" &&\
+unzip hashicorp.terraform-2.25.2@linux-x64.vsix "extension/*" &&\
 mv extension /opt/code-oss/extensions/hashicorp-terraform
 
 # Install Terraform

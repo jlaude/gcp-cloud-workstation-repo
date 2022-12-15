@@ -1,7 +1,7 @@
 steps:
 
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  args: ['gcloud', 'cp', 'gs://jlaude-workstations-extensions/source-protect-v0.2.1-linux_amd64.vsix', '/workspace']
+  args: ['gcloud', 'storage', 'cp', 'gs://jlaude-workstations-extensions/source-protect-v0.2.1-linux_amd64.vsix', '/workspace']
 
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}', '.' ]

@@ -1,5 +1,6 @@
 FROM us-central1-docker.pkg.dev/cloud-workstations-images/predefined/code-oss:latest
 
+
 RUN sudo apt-get update
 
 # Install extensions for Code OSS

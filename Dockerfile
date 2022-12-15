@@ -28,6 +28,12 @@ RUN wget https://open-vsx.org/api/hashicorp/terraform/linux-x64/2.25.2/file/hash
 unzip hashicorp.terraform-2.25.2@linux-x64.vsix "extension/*" &&\
 mv extension /opt/code-oss/extensions/hashicorp-terraform
 
+# Install preview extension source protection
+
+RUN gcloud storage cp gs://jlaude-workstations-extensions/source-protect-v0.2.1-linux_amd64.vsix . && \
+unzip source-protect-v0.2.1-linux_amd64.vsix "extension/*" &&\
+mv extension /opt/code-oss/extensions/source-protection
+
 # Install Terraform
 RUN sudo apt-get install -y gnupg software-properties-common
 
@@ -42,3 +48,5 @@ RUN echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
 RUN sudo apt update
 
 RUN sudo apt-get install terraform
+
+

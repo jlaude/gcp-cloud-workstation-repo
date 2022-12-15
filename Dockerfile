@@ -30,8 +30,7 @@ mv extension /opt/code-oss/extensions/hashicorp-terraform
 
 # Install preview extension source protection
 
-RUN gcloud storage cp gs://jlaude-workstations-extensions/source-protect-v0.2.1-linux_amd64.vsix . && \
-unzip source-protect-v0.2.1-linux_amd64.vsix "extension/*" &&\
+RUN unzip /workspace/source-protect-v0.2.1-linux_amd64.vsix "extension/*" &&\
 mv extension /opt/code-oss/extensions/source-protection
 
 # Install Terraform

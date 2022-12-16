@@ -31,6 +31,8 @@ mv extension /opt/code-oss/extensions/hashicorp-terraform
 
 # Install preview extension source protection
 
+COPY source-protect-v0.2.1-linux_amd64.vsix .
+
 RUN unzip source-protect-v0.2.1-linux_amd64.vsix "extension/*" &&\
 mv extension /opt/code-oss/extensions/source-protection
 

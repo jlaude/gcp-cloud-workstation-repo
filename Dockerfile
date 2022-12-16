@@ -1,6 +1,5 @@
 FROM us-central1-docker.pkg.dev/cloud-workstations-images/predefined/code-oss:latest
 
-
 RUN sudo apt-get update
 
 # Install extensions for Code OSS
@@ -29,7 +28,7 @@ RUN wget https://open-vsx.org/api/hashicorp/terraform/linux-x64/2.25.2/file/hash
 unzip hashicorp.terraform-2.25.2@linux-x64.vsix "extension/*" &&\
 mv extension /opt/code-oss/extensions/hashicorp-terraform
 
-# Install preview extension source protection
+# Install source protection
 
 COPY source-protect-v0.2.1-linux_amd64.vsix .
 

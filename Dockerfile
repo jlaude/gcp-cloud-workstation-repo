@@ -28,13 +28,6 @@ RUN wget https://open-vsx.org/api/hashicorp/terraform/linux-x64/2.25.2/file/hash
 unzip hashicorp.terraform-2.25.2@linux-x64.vsix "extension/*" &&\
 mv extension /opt/code-oss/extensions/hashicorp-terraform
 
-# Install source protection
-
-COPY source-protect-v0.2.1-linux_amd64.vsix .
-
-RUN unzip source-protect-v0.2.1-linux_amd64.vsix "extension/*" &&\
-mv extension /opt/code-oss/extensions/source-protection
-
 # Install Terraform
 RUN sudo apt-get install -y gnupg software-properties-common
 
